@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    font-family: 'Merriweather', serif;
+}
+
+/*Styling header*/
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 1em;
+    background-image: url("popcorn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vw;
+}
+
+header h1{
+    color: #cf000f;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+header nav li {
+    list-style: none;
+    margin: 0 2em;
+    background-color: #cf000f;
+    padding:5px 10px;
+    border-radius: 10px;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+i {
+    margin-top: 2em;
+    color: #cf000f;
+}
+
+/*Style content in home page*/
+#wrapper ul{
+    list-style: none;
+}
+
+/*Style content in second page*/
+#movieList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1em;
+}
+
+#movieList li{
+    list-style: none;
+}
+
+.movie img{
+    width: 50%;
+}
+
+/*Tablet size*/
+@media screen and (min-width: 600px) { 
+    header {
+        height: 50vw;
+    }
+    /*Home page*/
+    #wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2em;
+    }
+    /*Second page*/
+    #movieList{
+        flex-direction: row;
+    }
+    #movieList .movie{
+        width: 33.33%;
+        padding: 10px;
+        margin: 2em
+    }
+  }
