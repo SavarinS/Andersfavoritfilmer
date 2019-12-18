@@ -1,3 +1,7 @@
+/**
+ * Consume JSON and show data in home page
+ */
+
 (function($) {
 
     $( document ).ready(function() {
@@ -21,7 +25,6 @@
                 //console.log("Title:",movie.title)
                 html += '<ul class= "moive">';
                 html += '<li>' + movie.id + '.' + "" + movie.title + '</li>';
-                //html += '<a href="movieList.html">Läs mer</a>';
                 html += '</ul>';
                 $("#wrapper").html(html);
               })
@@ -33,12 +36,8 @@
           }); //end of ajax
 
          
-
-        
          
          
-         
-    
     
 
 

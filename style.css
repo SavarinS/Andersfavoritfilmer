@@ -9,6 +9,29 @@ h1, h2, h3, h4, h5, h5 {
     font-family: 'Merriweather', serif;
 }
 
+#pageTitle {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid transparent; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 6s steps(20, end),
+      blink-caret .75s step-end;
+  }
+
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
 /*Styling header*/
 header {
     display: flex;
@@ -24,6 +47,7 @@ header {
 
 header h1{
     color: #cf000f;
+    letter-spacing: 5px;
 }
 
 header nav{
@@ -46,10 +70,6 @@ header nav li a {
     color: #eeeeee;
 }
 
-i {
-    margin-top: 2em;
-    color: #cf000f;
-}
 
 /*Style content in home page*/
 #wrapper ul{
@@ -75,7 +95,7 @@ i {
 }
 
 /*Tablet size*/
-@media screen and (min-width: 600px) { 
+@media screen and (min-width: 768px) { 
     header {
         height: 50vw;
     }
@@ -93,5 +113,24 @@ i {
         width: 33.33%;
         padding: 10px;
         margin: 2em
+    }
+  }
+
+  @media screen and (min-width: 1200px) { 
+    header {
+        height: 45vw;
+       
+    }
+    header h1{
+        font-size: 3.5em;
+    }
+
+    header nav li{
+        padding: 10px 20px;
+        margin-top: 3em;
+    }
+
+    header nav li a{
+        font-size: 1.5em;
     }
   }
