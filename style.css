@@ -9,16 +9,6 @@ h1, h2, h3, h4, h5, h5 {
     font-family: 'Merriweather', serif;
 }
 
-#pageTitle {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid transparent; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 6s steps(20, end),
-      blink-caret .75s step-end;
-  }
 
   /* The typing effect */
 @keyframes typing {
@@ -114,9 +104,21 @@ header nav li a {
         padding: 10px;
         margin: 2em
     }
+
+    #pageTitle {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid transparent; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 6s steps(20, end),
+          blink-caret .75s step-end;
+      }
   }
 
   @media screen and (min-width: 1200px) { 
+
     header {
         height: 45vw;
        
