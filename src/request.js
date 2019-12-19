@@ -5,14 +5,14 @@
 (function($) {
 
     $( document ).ready(function() {
-        console.log( "GET request ready!" );
+        //console.log( "GET request ready!" );
 
         
         function geturl(url, html)
         {
             $.getJSON(url,
             function(movies){
-                console.log("Movies list",movies.title);
+                //console.log("Movies list",movies.title);
 
                 
                 var html = '';

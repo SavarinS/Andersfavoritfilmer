@@ -2,48 +2,42 @@
  * Consume JSON and show data in home page
  */
 
-(function($) {
+ 
+ const url = 'https://ndr2l4ex5h.execute-api.eu-west-1.amazonaws.com/dev/movies';
 
-    $( document ).ready(function() {
-        console.log( "document ready!" );
+ fetch(url)
+  .then((resp) => resp.json())
+  .then(function(data){
+    console.log('Fetch data', data);
+  
+      data.forEach(title => {
+      console.log(title.title)
+        //const movieTitle = title.title;
+        const list = document.getElementById('wrapper')
+        const heading = document.createElement('h3') //new element for title
+        heading.textContent = title.title
+        const container = document.createElement('div')
+        container.setAttribute('class', 'movie-title') //set class for li element
+
+        
+        list.appendChild(container) // append element li to #wrapper
+        container.appendChild(heading) // append heading h3 to element li
+        
+        
+        //console.log('Title:', movieTitle)
        
-        //Ajax method to make an HTTP call
-        const Url = 'https://ndr2l4ex5h.execute-api.eu-west-1.amazonaws.com/dev/movies';
-        $.ajax({ //loading data by ajax
-            type: "GET",
-            url: Url,
-            timeout: 2000,
-            complete: function() {
-              //console.log('Connection is complete.');
-            },
-            success: function(myData) {
-              //console.log(" Movies ", myData);
+                
+             
+        
 
-              //Display data
-            var html = '';
-              myData.forEach(movie => {// Log each movie's title
-                //console.log("Title:",movie.title)
-                html += '<ul class= "moive">';
-                html += '<li>' + movie.id + '.' + "" + movie.title + '</li>';
-                html += '</ul>';
-                $("#wrapper").html(html);
-              })
-            },
-            error: function() {
-              console.log('Connection failed!');
-            }
+        //console.log('list, heading', list, heading)
 
-          }); //end of ajax
-
-         
-         
-         
+      }) //forEach
     
+     
+  })
+    .catch(function(error){
+      console.log('Fetch not succeed', error);
+  });
 
-
-
-    }); //end of document ready
-
-
-
-})(jQuery);  // end of function
+  
