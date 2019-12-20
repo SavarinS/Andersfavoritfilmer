@@ -69,10 +69,14 @@ header nav li a {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    padding: 2em;
-    background-color: #F9B138;
+    
+    
 }
-
+#movieList .item {
+    /*background-color: #F9B138;*/
+    padding: 1em;
+    margin: 1em;
+}
 #movieList .item img{
     width: 50%;
 }
@@ -105,7 +109,7 @@ header nav li a {
     #movieList{
         flex-direction: row;
     }
-    #movieList .movie{
+    #movieList .item{
         width: 33.33%;
         padding: 10px;
         margin: 2em
