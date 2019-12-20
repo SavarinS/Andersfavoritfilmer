@@ -22,16 +22,8 @@
         
         list.appendChild(container) // append element li to #wrapper
         container.appendChild(heading) // append heading h3 to element li
-        
-        
-        //console.log('Title:', movieTitle)
-       
                 
-             
-        
-
-        //console.log('list, heading', list, heading)
-
+        //console.log('Title:', movieTitle)
       }) //forEach
     
      

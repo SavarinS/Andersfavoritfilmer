@@ -50,9 +50,17 @@ header nav li a {
 
 
 /*Style content in home page*/
+#wrapper {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 #wrapper ul{
     list-style: none;
 }
+
 
 /*Style content in second page*/
 #movieList {
@@ -61,23 +69,14 @@ header nav li a {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    padding: 0 1em;
+    padding: 2em;
+    background-color: #F9B138;
 }
 
-#movieList li{
-    list-style: none;
-}
-
-.movie img{
+#movieList .item img{
     width: 50%;
 }
 
-#wrapper {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 
 /*Tablet size*/
 @media screen and (min-width: 768px) { 
