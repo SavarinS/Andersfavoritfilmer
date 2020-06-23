@@ -1,3 +1,8 @@
+The method in this project are
+1. Write JavaScript to consume REST API from a provided endpoint.
+2. Styling frontend with CSS.
+
+
 # Andersfavoritfilmer
 
 Vår frontendutvecklare Anders tycker väldigt mycket om film och har gjort en databas med sina favoritfilmer och till det ett API .  Tyvärr hinner han inte skriva ihop något snyggt GUI just nu, utan skulle vilja ha din hjälp.
